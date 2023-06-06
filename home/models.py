@@ -12,13 +12,21 @@ class PortfolioBlock(blocks.StructBlock):
     photo = ImageChooserBlock(required=True)
     intro = blocks.RichTextBlock()
 
+class TeamBlock(blocks.StructBlock):    
+    photo = ImageChooserBlock(required=True)
+    name = blocks.CharBlock(classname="name")
+    intro = blocks.RichTextBlock()
+    designation = blocks.CharBlock(classname="designation")
+
 class HomePage(Page):
     services = RichTextField(blank=True)
-    team = RichTextField(blank=True)
     portfolio = StreamField([('portfolio', PortfolioBlock())], null=True, blank=True,use_json_field=True)
+    myteam = StreamField([('myteam', TeamBlock())], null=True, blank=True,use_json_field=True)
+
     content_panels = Page.content_panels + [
         FieldPanel('services'),
-        FieldPanel('team'),
+        FieldPanel('myteam'),
         FieldPanel('portfolio'),
+
     ] 
 

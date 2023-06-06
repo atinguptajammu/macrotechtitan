@@ -6,7 +6,7 @@ console.log(parentWidth + "--"+ parentHeight + "---" + Math.ceil(howmanyboxes));
 var createBoard = function()
 {
     rank = ["A","B","C","D","E","F","G","H" ,"I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-    file = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
+    file = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
     var currentTile = {};
     var count = 0;
     for(var i = 0; i < rank.length; i++)
@@ -14,7 +14,7 @@ var createBoard = function()
     {
         for (var j = 0; j < file.length; j++)
         {
-            if(count%18 == 0)
+            if(count%36 == 0)
             {
             $("#chessboard").append('<div class="tile smoothfade" style="clear:left; position:relative;"><div class="circle"></div></div>');
 

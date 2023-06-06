@@ -11,7 +11,7 @@
 float: left;
 background-color: darkgray;
 transition: background-color 2s;
-position: absolute;
+position: fixed;
 overflow: hidden;
 }
 
@@ -66,8 +66,8 @@ ul li#bishop
 
 .tile
 {
-    width: 64px;
-    height: 64px;
+    width: 32px;
+    height: 32px;
     float: left;
 }
 
@@ -76,14 +76,14 @@ ul li#bishop
 
     background-color: #191919;
 color:white;
-margin: 5px;
+margin: 2.5px;
 }
 
 .white
 {
     background-color: #191919;
 color:black;
-margin: 5px;
+margin: 2.5px;
 
 }
 
@@ -174,13 +174,13 @@ box-shadow: 0px 0px 25px 10px #ffa;
     transition: background-color 0.25s ease-in time;
 }
 .circle{
-background: #fff;
-width: 11px;
-height: 11px;
-border-radius:50%;
-top:63px;
-right:-10px;
-position: absolute;
+    background: #fff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 30px;
+    right: -6px;
+    position: absolute;
 }
 #chessboard:hover{
     background-color: #000;

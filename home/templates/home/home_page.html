@@ -16,21 +16,57 @@ Delete the line below if you're just getting started and want to remove the welc
 {% comment %}
 Delete the line below if you're just getting started and want to remove the welcome screen!
 {% endcomment %}
-<h1>Services</h1>
+<h1 class="text-center c_o">Services</h1>
 <div id="services">{{ page.services|richtext }}</div>
-<h1>Team</h1>
-<div id="team">{{ page.team|richtext }}</div>
-<h1>Portfolio</h1>
+<h1 class="text-center c_o">Our Team</h1>
+<div id="team">
+    <article class="container p-4 border-bottom">
+        <div class="row">
+            {% for block in page.myteam %}
+                {% if block.block_type == 'myteam' %}
+                    <div class="col-sm-3 mb-4 text-center">
+                        <div class="team-inside">                        
+                            {% image block.value.photo original class="img-fluid" %}
+                            <h3 class="mb-2 mt-2">{{ block.value.name }}</h3>
+                            <div>
+                                {{ block.value.intro }}
+                            </div>
+                            <h5 class="mb-2 mt-2">{{ block.value.designation }}</h5>
+                            <div class="socialmedia">                                
+                                <a href="" class="me-4 text-reset">
+                                  <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                  <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                  <i class="fab fa-github"></i>
+                                </a>
+                              </div>
+                        </div>                       
+                    </div>
+                {% else %}
+                    <section class="block-{{ block.block_type }}">
+                        {% include_block block %}
+                    </section>
+                {% endif %}
+            {% endfor %}
+        </div>  
+    </article>
+</div>
+<h1 class="text-center c_o">Portfolio</h1>
 <div id="portfolio">
     <article class="container p-4 border-bottom">
         <div class="row">
             {% for block in page.portfolio %}
                 {% if block.block_type == 'portfolio' %}
-                    <div class="col-sm-4 mb-4">                        
-                        {% image block.value.photo original class="img" %}
-                        <h3 class="mb-2">{{ block.value.heading }}</h3>
-                        <div>
-                            {{ block.value.intro }}
+                    <div class="col-sm-3 mb-4">
+                        <div class="port-inside">                    
+                            {% image block.value.photo original class="img-fluid" %}
+                            <h3 class="mb-2">{{ block.value.heading }}</h3>
+                            <div class="mb-2 mt-2">
+                                {{ block.value.intro }}
+                            </div>
                         </div>
                     </div>
                 {% else %}
