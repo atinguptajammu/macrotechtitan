@@ -184,9 +184,9 @@ svg:not(:root) {
     }
 }
 /* custom css */
-.port-inside h3{display:none; position:absolute;left:0;right:0;top:0;bottom:0; color: #fff;}
-.port-inside{position: relative;}
-.port-inside:hover h3{display: block;}
+.port-inside .img-h3 h3{display:none; position:absolute;right:0;top:0;bottom:0; color: #fff;}
+.port-inside .img-h3{position: relative;}
+.port-inside .img-h3:hover h3{display: inline-block; color: green; font-size: 12px; }
 .port-inside img{box-shadow: 2px 2px 2px #ebebeb, -2px -2px 2px #ebebeb;}
 #team img{border-radius: 50%; border: 2px solid green;}
 #team img:hover{border: 2px solid orange;}

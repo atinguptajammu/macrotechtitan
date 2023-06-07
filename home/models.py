@@ -17,6 +17,11 @@ class TeamBlock(blocks.StructBlock):
     name = blocks.CharBlock(classname="name")
     intro = blocks.RichTextBlock()
     designation = blocks.CharBlock(classname="designation")
+    socialMedia = blocks.StructBlock([
+        ('instagram', blocks.CharBlock()),
+        ('linked_in', blocks.CharBlock()),
+        ('git', blocks.CharBlock()),
+    ])
 
 class HomePage(Page):
     services = RichTextField(blank=True)
