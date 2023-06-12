@@ -184,6 +184,10 @@ svg:not(:root) {
     }
 }
 /* custom css */
+.nav-link:hover{color: green;}
+.sec_hide{display: none;}
+.sec_show{display: block;}
+#services p{margin-bottom: 15px; font-size: 17px; padding-left: 24px; padding-right: 24px;}
 .port-inside .img-h3 h3{display:none; position:absolute;right:0;top:0;bottom:0; color: #fff;}
 .port-inside .img-h3{position: relative;}
 .port-inside .img-h3:hover h3{display: inline-block; color: green; font-size: 12px; }

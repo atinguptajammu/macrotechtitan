@@ -82,3 +82,33 @@ jQuery(document).ready(function($) {
     $('.A2 > div').removeClass("circle");
     $('.A1 > div').removeClass("circle");
 });
+
+// Add active class on hover to li > a
+
+var btnContainer = document.getElementById("navbarSupportedContent");
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("nav-link");
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    // If there's no active class
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active", "");
+    }
+    // Add the active class to the current/clicked button
+    this.className += " active";
+  });
+}
+
+// END Add active class on hover to li > a
+
+// show content of a link clicked
+$(document).ready(function(){
+    $("#navbarSupportedContent li a").click(function(){
+        var varr = $(this).text().toLowerCase();
+        // console.log(varr);
+      $('#'+varr).addClass("sec_show");
+      $('.sec_show').not('#'+varr).removeClass('sec_show');
+    });
+  });

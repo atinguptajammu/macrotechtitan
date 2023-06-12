@@ -16,10 +16,17 @@ Delete the line below if you're just getting started and want to remove the welc
 {% comment %}
 Delete the line below if you're just getting started and want to remove the welcome screen!
 {% endcomment %}
-<h1 class="text-center c_o">Services</h1>
-<div id="services">{{ page.services|richtext }}</div>
+<div class="sec_hide sec_show">
+    <h3 class="mt-2 mb-2 p-4 ">Macro Tech Titan – Engineering Complex Systems with Advanced Next Generation Battle Ready
+        Technologies. MTT designs, builds, and/or operates complex computer technology systems, and
+        provides I.T. services and support with a focus on finance,</h3>
+</div>
+<div id="services" class="sec_hide">
+    <h1 class="text-center c_o  mb-2">Services</h1>    
+    {{ page.services|richtext }}
+</div>
+<div id="team"  class="sec_hide">
 <h1 class="text-center c_o">Our Team</h1>
-<div id="team">
     <article class="container p-4 border-bottom">
         <div class="row">
             {% for block in page.myteam %}
@@ -54,8 +61,8 @@ Delete the line below if you're just getting started and want to remove the welc
         </div>  
     </article>
 </div>
+<div id="portfolio" class="sec_hide">
 <h1 class="text-center c_o">Portfolio</h1>
-<div id="portfolio">
     <article class="container p-4 border-bottom">
         <div class="row">
             {% for block in page.portfolio %}
