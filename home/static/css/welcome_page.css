@@ -184,6 +184,45 @@ svg:not(:root) {
     }
 }
 /* custom css */
+#legend{position: absolute;}
+.rim1, .rim2, .rim3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    width: 0em;
+    height: 0em;
+    border: white .25em solid;
+    background: skyblue;
+  }
+  .rim1 {
+    -webkit-animation: expand 2s linear infinite;
+  }
+  .rim2 {
+    -webkit-animation: expand 2s linear .5s infinite;
+  }
+  .rim3 {
+    -webkit-animation: expand 2s linear 1s infinite;
+  }
+  
+  @-webkit-keyframes expand {
+    0% {
+      top: calc(50% - .5em);
+      left: calc(50% - .5em);
+      width: 1em;
+      height: 1em;
+      border: white .125em solid;
+      opacity: 1;
+    }
+    100% {
+       top: calc(50% - 1.5em);
+      left: calc(50% - 1.5em); 
+      width: 3em;
+      height: 3em;
+      border: white .25em solid;
+      opacity: 0;
+    }
+  }
 body #newchess{position: fixed; width:100%; height: 100%;}
 body #newchess{
     background-color: darkgray;

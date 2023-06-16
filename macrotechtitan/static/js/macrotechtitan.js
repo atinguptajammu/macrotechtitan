@@ -111,4 +111,12 @@ $(document).ready(function(){
     //   $('#'+varr).addClass("sec_show");
     //   $('.sec_show').not('#'+varr).removeClass('sec_show');
     // });
+    $("body").on('mousemove',function(e){
+    var x = e.clientX;
+    var y =e.clientY;
+    $("#legend").css({'top':y ,'left':x});
+    console.log("X : "+x + " || Y : "+y);
+
+    });
+
   });
