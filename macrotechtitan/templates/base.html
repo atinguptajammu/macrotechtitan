@@ -37,117 +37,119 @@
     </head>
 
     <body id="home">
-      <div id="chessboard"></div>
-      <div id="maincontainer" class="container" style="position: relative; background: rgba(255,255,255,0.97);">
-        <div class="row">
-          {% wagtailuserbar %}
-          <nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark" data-bs-theme="dark">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="#">Logo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="#team">Team</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="#products">Products</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Contact</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-
-          {% block content %}{% endblock %}
-          <footer class="text-center text-lg-start bg-light text-muted">
-              <!-- Section: Social media -->
-              <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                <!-- Left -->
-                <div class="me-5 d-none d-lg-block">
-                  <span>Get connected with us on social networks:</span>
-                </div>
-                <!-- Left -->
-            
-                <!-- Right -->
-                <div class="socialmedia">
-                  <a href="" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="" class="me-4 text-reset">
-                    <i class="fab fa-google"></i>
-                  </a>
-                  <a href="" class="me-4 text-reset">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                  <a href="" class="me-4 text-reset">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="" class="me-4 text-reset">
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-                <!-- Right -->
-              </section>
-              <!-- Section: Social media -->
-            
-              <!-- Section: Links  -->
-              <section class="">
-                <div class="container text-center text-md-start mt-5">
-                  <!-- Grid row -->
-                  <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
-                      <!-- Content -->
-                      <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"></i>Company name
-                      </h6>
-                    </div>
-                    <!-- Grid column -->
-            
-                    <!-- Grid column -->
-                    <div class="col-md-9 col-lg-9 col-xl-9 mx-auto text-end ">
-                      <!-- Links -->
-                      <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="#">
-                        Privacy policy
-                      </a>
-                      <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="#">
-                          Legal
-                      </a>
-                      <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="#">Contact</a>
-                    </div>
-                    <!-- Grid column -->
+      {% comment %} <div id="chessboard"></div> {% endcomment %}
+      <div id="newchess"></div>
+        <div id="maincontainer" class="container" style="position: relative; background: rgba(255,255,255,0.97);">
+          <div class="row">
+            {% wagtailuserbar %}
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark" data-bs-theme="dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Logo</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#services">Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#team">Team</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#portfolio">Portfolio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#projects">Projects</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#products">Products</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                      </li>
+                    </ul>
                   </div>
-                  <!-- Grid row -->
                 </div>
-              </section>
-              <!-- Section: Links  -->
-            
-              <!-- Copyright -->
-              <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                © 2023 Copyright:
-                <a class="text-reset fw-bold" href="#">Company name</a>
-              </div>
-              <!-- Copyright -->
-            </footer>
+              </nav>
+
+            {% block content %}{% endblock %}
+            <footer class="text-center text-lg-start bg-light text-muted">
+                <!-- Section: Social media -->
+                <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                  <!-- Left -->
+                  <div class="me-5 d-none d-lg-block">
+                    <span>Get connected with us on social networks:</span>
+                  </div>
+                  <!-- Left -->
+              
+                  <!-- Right -->
+                  <div class="socialmedia">
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                  <!-- Right -->
+                </section>
+                <!-- Section: Social media -->
+              
+                <!-- Section: Links  -->
+                <section class="">
+                  <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                      <!-- Grid column -->
+                      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                          <i class="fas fa-gem me-3"></i>Company name
+                        </h6>
+                      </div>
+                      <!-- Grid column -->
+              
+                      <!-- Grid column -->
+                      <div class="col-md-9 col-lg-9 col-xl-9 mx-auto text-end ">
+                        <!-- Links -->
+                        <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="#">
+                          Privacy policy
+                        </a>
+                        <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="#">
+                            Legal
+                        </a>
+                        <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="#">Contact</a>
+                      </div>
+                      <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                  </div>
+                </section>
+                <!-- Section: Links  -->
+              
+                <!-- Copyright -->
+                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                  © 2023 Copyright:
+                  <a class="text-reset fw-bold" href="#">Company name</a>
+                </div>
+                <!-- Copyright -->
+              </footer>
+          </div>
         </div>
-      </div>
+      
 
         {# Global javascript #}
         <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>

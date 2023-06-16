@@ -151,9 +151,9 @@ svg:not(:root) {
 }
 
 @media (max-width: 996px) {
-    body {
+    /* body {
         max-width: 780px;
-    }
+    } */
 }
 
 @media (max-width: 767px) {
@@ -184,9 +184,21 @@ svg:not(:root) {
     }
 }
 /* custom css */
+body #newchess{position: fixed; width:100%; height: 100%;}
+body #newchess{
+    background-color: darkgray;
+    background-image:url("/media/images/pattern7.png");
+    background-repeat: repeat;
+    background-size: 2.3rem;
+    transition: 0.6s;
+}
+body #newchess:hover{
+    background-color: black;
+    background-image:url("/media/images/pattern7T.png");
+}
 .nav-link:hover{color: green;}
-.sec_hide{display: none;}
-.sec_show{display: block;}
+/* .sec_hide{display: none;}
+.sec_show{display: block;} */
 #services p{margin-bottom: 15px; font-size: 17px; padding-left: 24px; padding-right: 24px;}
 .port-inside .img-h3 h3{display:none; position:absolute;right:0;top:0;bottom:0; color: #fff;}
 .port-inside .img-h3{position: relative;}
