@@ -16,18 +16,18 @@ Delete the line below if you're just getting started and want to remove the welc
 {% comment %}
 Delete the line below if you're just getting started and want to remove the welcome screen!
 {% endcomment %}
-<div class="sec_hide sec_show">
-    <h3 class="mt-2 mb-2 p-4 ">Macro Tech Titan – Engineering Complex Systems with Advanced Next Generation Battle Ready
+<div class="sec_hide sec_show css3-shadow mt-4 mb-4 c_w p-4">
+    <h3 class="mt-2 mb-2  pr-4 pl-4">Macro Tech Titan – Engineering Complex Systems with Advanced Next Generation Battle Ready
         Technologies. MTT designs, builds, and/or operates complex computer technology systems, and
         provides I.T. services and support with a focus on finance,</h3>
 </div>
-<div id="services" class="sec_hide">
+<div id="services" class="sec_hide css3-shadow mt-4 mb-4 c_w p-4">
     <h1 class="text-center c_o  mb-2">Services</h1>    
     {{ page.services|richtext }}
 </div>
-<div id="team"  class="sec_hide">
-<h1 class="text-center c_o">Our Team</h1>
-    <article class="container p-4 border-bottom">
+<div id="team"  class="sec_hide css3-shadow mt-4 mb-4 c_w p-4">
+    <h1 class="text-center c_o">Our Team</h1>
+    <article class="container p-4">
         <div class="row">
             {% for block in page.myteam %}
                 {% if block.block_type == 'myteam' %}
@@ -41,15 +41,15 @@ Delete the line below if you're just getting started and want to remove the welc
                             <h5 class="mb-2 mt-2">{{ block.value.designation }}</h5>
                             <div class="socialmedia">                      
                                 <a href="{{ block.value.socialMedia.instagram.value }}" class="me-4 text-reset">
-                                  <i class="fab fa-instagram"></i>
+                                <i class="fab fa-instagram"></i>
                                 </a>
                                 <a href="{{ block.value.socialMedia.linked_in }}" class="me-4 text-reset">
-                                  <i class="fab fa-linkedin"></i>
+                                <i class="fab fa-linkedin"></i>
                                 </a>
                                 <a href="{{ block.value.socialMedia.git }}" class="me-4 text-reset">
-                                  <i class="fab fa-github"></i>
+                                <i class="fab fa-github"></i>
                                 </a>
-                              </div>
+                            </div>
                         </div>                       
                     </div>
                 {% else %}
@@ -61,9 +61,9 @@ Delete the line below if you're just getting started and want to remove the welc
         </div>  
     </article>
 </div>
-<div id="portfolio" class="sec_hide">
+<div id="portfolio" class="sec_hide css3-shadow mt-4 mb-4 c_w p-4">
 <h1 class="text-center c_o">Portfolio</h1>
-    <article class="container p-4 border-bottom">
+    <article class="container p-4">
         <div class="row">
             {% for block in page.portfolio %}
                 {% if block.block_type == 'portfolio' %}

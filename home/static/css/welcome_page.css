@@ -249,3 +249,27 @@ body #newchess:hover{
 #team .team-inside h5{color: green; font-weight: 600;}
 .socialmedia a{text-decoration: none;}
 .c_o{color: green;}
+.c_w{background-color: white;}
+.pr-4{padding-right: 24px;}
+.pl-4{padding-left: 24px;}
+
+.css3-shadow{
+    position:relative;
+    -webkit-box-shadow:0 1px 7px rgba(0, 0, 0, 0.3);
+    box-shadow:0 1px 7px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+.css3-shadow:after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    bottom:0px;
+    left:10%;
+    right:10%;
+    width:80%;
+    height:50%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
