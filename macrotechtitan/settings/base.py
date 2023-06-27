@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     "wagtail.contrib.forms",
     "captcha",
     "wagtailcaptcha",
-    "crispy_forms",
     "widget_tweaks",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
@@ -173,6 +172,4 @@ WAGTAILADMIN_BASE_URL = "http://example.com"
 # https://developers.google.com/recaptcha/docs/faq
 RECAPTCHA_PUBLIC_KEY = "6LcNJtUmAAAAAOAS-j8AkfSUMZfV92kMt2aXV-yu"
 RECAPTCHA_PRIVATE_KEY = "6LcNJtUmAAAAACutsHah22fMjmcRgfyzB0xeu4bM"
-NOCAPTCHA = True
-SILENCED_SYSTEM_CHECKS = ["captcha.recaptcha_test_key_error"]
 
