@@ -171,8 +171,8 @@ WAGTAILADMIN_BASE_URL = "http://example.com"
 
 # DO NOT use on production, test key is available in the URL below
 # https://developers.google.com/recaptcha/docs/faq
-RECAPTCHA_PUBLIC_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-RECAPTCHA_PRIVATE_KEY = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
+RECAPTCHA_PUBLIC_KEY = "6LcNJtUmAAAAAOAS-j8AkfSUMZfV92kMt2aXV-yu"
+RECAPTCHA_PRIVATE_KEY = "6LcNJtUmAAAAACutsHah22fMjmcRgfyzB0xeu4bM"
 NOCAPTCHA = True
 SILENCED_SYSTEM_CHECKS = ["captcha.recaptcha_test_key_error"]
 
