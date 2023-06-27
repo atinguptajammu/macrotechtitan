@@ -27,6 +27,10 @@ INSTALLED_APPS = [
     "home",
     "search",
     "wagtail.contrib.forms",
+    "captcha",
+    "wagtailcaptcha",
+    "crispy_forms",
+    "widget_tweaks",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
     "wagtail.sites",
@@ -164,3 +168,11 @@ WAGTAILSEARCH_BACKENDS = {
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 WAGTAILADMIN_BASE_URL = "http://example.com"
+
+# DO NOT use on production, test key is available in the URL below
+# https://developers.google.com/recaptcha/docs/faq
+RECAPTCHA_PUBLIC_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+RECAPTCHA_PRIVATE_KEY = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
+NOCAPTCHA = True
+SILENCED_SYSTEM_CHECKS = ["captcha.recaptcha_test_key_error"]
+

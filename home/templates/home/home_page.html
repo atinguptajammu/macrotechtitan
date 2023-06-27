@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags %}
-{% load wagtailimages_tags %}
+{% load wagtailimages_tags widget_tweaks %}
 {% load static %}
 {% block body_class %}template-homepage{% endblock %}
 {% block extra_css %}
@@ -86,6 +86,37 @@ Delete the line below if you're just getting started and want to remove the welc
             {% endfor %}
         </div>  
     </article>
+</div>
+<div id="contact" class="sec_hide css3-shadow mt-4 mb-4 c_w p-4">
+<h1 class="text-center c_o">Contact</h1>
+  <br>
+  <form action="{% pageurl page %}" method="POST" class="row">
+    {% csrf_token %}
+    {% comment %} {{ form|crispy }}
+    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg" >Submit</button> {% endcomment %}
+    {% if form.non_field_errors %}
+      <div class="alert alert-danger" role="alert">
+        {% for error in form.non_field_errors %}
+          {{ error }}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% for field in form.visible_fields %}
+        {% if field.label == 'Message'  %}
+            <div class="form-group col-sm-12">
+                {{ field.label_tag }}
+                {% render_field field class+="form-control" %}
+            </div>
+            {% else %}
+            <div class="form-group col-sm-6">
+                {{ field.label_tag }}
+                {% render_field field class+="form-control" %}
+              </div>
+        {% endif %}      
+    {% endfor %}
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
 </div>
 
 
