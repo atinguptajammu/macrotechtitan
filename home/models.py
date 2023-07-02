@@ -24,9 +24,9 @@ class TeamBlock(blocks.StructBlock):
     intro = blocks.RichTextBlock()
     designation = blocks.CharBlock(classname="designation")
     socialMedia = blocks.StructBlock([
-        ('instagram', blocks.CharBlock()),
-        ('linked_in', blocks.CharBlock()),
-        ('git', blocks.CharBlock()),
+        ('instagram', blocks.CharBlock(required=False)),
+        ('linked_in', blocks.CharBlock(required=False)),
+        ('git', blocks.CharBlock(required=False)),
     ])
 
 class HomePage(WagtailCaptchaEmailForm , Page):
