@@ -37,6 +37,7 @@ class HomePage(WagtailCaptchaEmailForm , Page):
     myteam = StreamField([('myteam', TeamBlock())], null=True, blank=True,use_json_field=True)
     thank_you_text = RichTextField(blank=True)
 
+    
     content_panels = AbstractEmailForm.content_panels  + [
         FieldPanel('heading'),
         FieldPanel('services'),
