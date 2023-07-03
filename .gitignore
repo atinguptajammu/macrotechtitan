@@ -20,7 +20,7 @@ npm-debug.log*
 /storybook-static
 env
 /env
-
+*.sqlite3
 ### JetBrains
 .idea/
 *.iml
