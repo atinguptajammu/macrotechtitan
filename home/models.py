@@ -31,11 +31,13 @@ class TeamBlock(blocks.StructBlock):
 
 class HomePage(WagtailCaptchaEmailForm , Page):
     services = RichTextField(blank=True)
+    heading = RichTextField(blank=True)
     portfolio = StreamField([('portfolio', PortfolioBlock())], null=True, blank=True,use_json_field=True)
     myteam = StreamField([('myteam', TeamBlock())], null=True, blank=True,use_json_field=True)
     thank_you_text = RichTextField(blank=True)
 
     content_panels = AbstractEmailForm.content_panels  + [
+        FieldPanel('heading'),
         FieldPanel('services'),
         FieldPanel('myteam'),
         FieldPanel('portfolio'),
