@@ -30,6 +30,7 @@ class TeamBlock(blocks.StructBlock):
     ])
 
 class HomePage(WagtailCaptchaEmailForm , Page):
+    heading = RichTextField(blank=True)
     services = RichTextField(blank=True)
     heading = RichTextField(blank=True)
     portfolio = StreamField([('portfolio', PortfolioBlock())], null=True, blank=True,use_json_field=True)
