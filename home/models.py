@@ -28,6 +28,15 @@ class TeamBlock(blocks.StructBlock):
         ('linked_in', blocks.CharBlock(required=False)),
         ('git', blocks.CharBlock(required=False)),
     ])
+class FooterSocialBlock(blocks.StructBlock):        
+    socialMedia = blocks.StructBlock([
+        ('facebook', blocks.CharBlock(required=False)),
+        ('twitter', blocks.CharBlock(required=False)),
+        ('google', blocks.CharBlock(required=False)),
+        ('instagram', blocks.CharBlock(required=False)),
+        ('linked_in', blocks.CharBlock(required=False)),
+        ('git', blocks.CharBlock(required=False)),
+    ])
 
 class HomePage(WagtailCaptchaEmailForm , Page):
     heading = RichTextField(blank=True)
@@ -35,6 +44,7 @@ class HomePage(WagtailCaptchaEmailForm , Page):
     heading = RichTextField(blank=True)
     portfolio = StreamField([('portfolio', PortfolioBlock())], null=True, blank=True,use_json_field=True)
     myteam = StreamField([('myteam', TeamBlock())], null=True, blank=True,use_json_field=True)
+    footersocialblock = StreamField([('footersocialblock', FooterSocialBlock())], null=True, blank=True,use_json_field=True)
     thank_you_text = RichTextField(blank=True)
 
     
@@ -43,6 +53,7 @@ class HomePage(WagtailCaptchaEmailForm , Page):
         FieldPanel('services'),
         FieldPanel('myteam'),
         FieldPanel('portfolio'),
+        FieldPanel('footersocialblock'),
     ] + [
         InlinePanel("form_fields", label="Form fields"),
         FieldPanel("thank_you_text", classname="full"),

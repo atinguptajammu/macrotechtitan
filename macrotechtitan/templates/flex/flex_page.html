@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags widget_tweaks %}
+{% load static %}
+{% block body_class %}template-homepage{% endblock %}
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="row" id="flex_pages">
+    <div class="col-sm-12">
+        {{ page.body|richtext }}
+    </div>
+</div>
+{% endblock content %}
