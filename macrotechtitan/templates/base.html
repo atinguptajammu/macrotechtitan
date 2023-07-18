@@ -34,127 +34,140 @@
         {% block extra_css %}
         {# Override this in templates to add extra stylesheets #}        
         {% endblock %}
+        <style>
+          #loader {
+            
+        }
+        #content {
+            display:none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+      </style>
     </head>
-
     <body id="home">
-      {% comment %} <div id="chessboard"></div> {% endcomment %}
-      <div id="newchess"><div id="legend" class="ripple"><div class="rim1"></div>
-      <div class="rim2"></div>
-      <div class="rim3"></div></div></div>
-        <div id="maincontainer" class="container" style="position: relative; background: rgba(255,255,255,0.97);">
-          <div class="row">
-            {% wagtailuserbar %}
-            <nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark" data-bs-theme="dark">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="/"><img width="100px" src="https://www.macrotechtitan.com/media/images/logo.original.png" /></a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#services">Services</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#team">Team</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#portfolio">Portfolio</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#projects">Projects</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#products">Products</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-
-          </div>
-          {% block content %}{% endblock %}
-            <footer class="text-center text-lg-start bg-light text-muted">
-                <!-- Section: Social media -->
-                <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                  <!-- Left -->
-                  <div class="me-5 d-none d-lg-block">
-                    <span>Get connected with us on social networks:</span>
-                  </div>
-                  <!-- Left -->
-              
-                  <!-- Right -->
-                  <div class="socialmedia">
-                    {% for block in page.footersocialblock %}
-                      {% if block.block_type == 'footersocialblock' %}
-                        <a href="{{ block.value.socialMedia.facebook }}" class="me-4 text-reset">
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="{{ block.value.socialMedia.twitter }}" class="me-4 text-reset">
-                          <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="{{ block.value.socialMedia.google }}" class="me-4 text-reset">
-                          <i class="fab fa-google"></i>
-                        </a>
-                        <a href="{{ block.value.socialMedia.instagram }}" class="me-4 text-reset">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="{{ block.value.socialMedia.linked_in }}" class="me-4 text-reset">
-                          <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="{{ block.value.socialMedia.git }}" class="me-4 text-reset">
-                          <i class="fab fa-github"></i>
-                        </a>
-                      {% endif %}
-                   {% endfor %}
-                  </div>
-                  <!-- Right -->
-                </section>
-                <!-- Section: Social media -->
-              
-                <!-- Section: Links  -->
-                <section class="">
-                  <div class="container text-center text-md-start mt-5">
-                    <!-- Grid row -->
-                    <div class="row mt-3">
-                      <!-- Grid column -->
-                      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                          <a href="/"><img width="100px" src="https://www.macrotechtitan.com/media/images/logo.original.png"></a>
-                        </h6>
-                      </div>
-                      <!-- Grid column -->
-              
-                      <!-- Grid column -->
-                      <div class="col-md-9 col-lg-9 col-xl-9 mx-auto text-end ">
-                        <!-- Links -->
-                        <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="/privacy-policy">
-                          Privacy policy
-                        </a>
-                        <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="#">
-                            Legal
-                        </a>
-                        <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="#">Contact</a>
-                      </div>
-                      <!-- Grid column -->
+      <div id="loader">
+        <img style="width:100%;" src="https://www.macrotechtitan.com/media/images/loader_glass.png" />
+      </div>
+      <div id="content">        
+        <div id="newchess"><div id="legend" class="ripple"><div class="rim1"></div>
+        <div class="rim2"></div>
+        <div class="rim3"></div></div></div>
+          <div id="maincontainer" class="container" style="position: relative; background: rgba(255,255,255,0.97);">
+            <div class="row">
+              {% wagtailuserbar %}
+              <nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark" data-bs-theme="dark">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="/"><img width="100px" src="https://www.macrotechtitan.com/media/images/logo.original.png" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="/#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" aria-current="page" href="/#team">Team</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" aria-current="page" href="/#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" aria-current="page" href="/#projects">Projects</a>
+                        </li>
+                        {% comment %} <li class="nav-item">
+                          <a class="nav-link" aria-current="page" href="/#products">Products</a>
+                        </li> {% endcomment %}
+                        <li class="nav-item">
+                          <a class="nav-link" href="/#contact">Contact</a>
+                        </li>
+                      </ul>
                     </div>
-                    <!-- Grid row -->
                   </div>
-                </section>
-                <!-- Section: Links  -->
-              
-                <!-- Copyright -->
-                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                  © 2023 Copyright:
-                  <a class="text-reset fw-bold" href="/">MACROTECHTITAN</a>
-                </div>
-                <!-- Copyright -->
-              </footer>
-        </div>
+                </nav>
+
+            </div>
+            {% block content %}{% endblock %}
+              <footer class="text-center text-lg-start bg-light text-muted">
+                  <!-- Section: Social media -->
+                  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                    <!-- Left -->
+                    <div class="me-5 d-none d-lg-block">
+                      <span>Get connected with us on social networks:</span>
+                    </div>
+                    <!-- Left -->
+                
+                    <!-- Right -->
+                    <div class="socialmedia">
+                      {% for block in page.footersocialblock %}
+                        {% if block.block_type == 'footersocialblock' %}
+                          <a href="{{ block.value.socialMedia.facebook }}" class="me-4 text-reset">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                          <a href="{{ block.value.socialMedia.twitter }}" class="me-4 text-reset">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                          <a href="{{ block.value.socialMedia.google }}" class="me-4 text-reset">
+                            <i class="fab fa-google"></i>
+                          </a>
+                          <a href="{{ block.value.socialMedia.instagram }}" class="me-4 text-reset">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                          <a href="{{ block.value.socialMedia.linked_in }}" class="me-4 text-reset">
+                            <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="{{ block.value.socialMedia.git }}" class="me-4 text-reset">
+                            <i class="fab fa-github"></i>
+                          </a>
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                    <!-- Right -->
+                  </section>
+                  <!-- Section: Social media -->
+                
+                  <!-- Section: Links  -->
+                  <section class="">
+                    <div class="container text-center text-md-start mt-5">
+                      <!-- Grid row -->
+                      <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
+                          <!-- Content -->
+                          <h6 class="text-uppercase fw-bold mb-4">
+                            <a href="/"><img width="100px" src="https://www.macrotechtitan.com/media/images/logo.original.png"></a>
+                          </h6>
+                        </div>
+                        <!-- Grid column -->
+                
+                        <!-- Grid column -->
+                        <div class="col-md-9 col-lg-9 col-xl-9 mx-auto text-end ">
+                          <!-- Links -->
+                          <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="/privacy-policy">
+                            Privacy policy
+                          </a>
+                          {% comment %} <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="#">
+                              Legal
+                          </a> {% endcomment %}
+                          <a class="text-capfirst fw-bold mb-4 text-decoration-none" href="/#contact">Contact</a>
+                        </div>
+                        <!-- Grid column -->
+                      </div>
+                      <!-- Grid row -->
+                    </div>
+                  </section>
+                  <!-- Section: Links  -->
+                
+                  <!-- Copyright -->
+                  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                    © 2023 Copyright:
+                    <a class="text-reset fw-bold" href="/">MACROTECHTITAN</a>
+                  </div>
+                  <!-- Copyright -->
+                </footer>
+          </div>
+      </div>
       
 
         {# Global javascript #}
@@ -167,5 +180,24 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js' crossorigin='anonymous'></script>
         {% endblock %}
+        <script>
+          // Function to fade out loader and fade in content
+        function fadeElements() {
+          var loader = document.getElementById('loader');
+          var content = document.getElementById('content');
+
+          loader.style.opacity = '0';
+
+          // Display content after loader fade-out completes
+          setTimeout(function() {
+              loader.style.display = 'none';
+              content.style.display = 'block';
+              content.style.opacity = '1';
+          }, 300); // Wait for loader fade-out duration (0.5 seconds)
+      }
+
+      // Call fadeElements after a specific duration (10 seconds)
+      setTimeout(fadeElements, 7000); // 10 seconds in milliseconds
+      </script>
     </body>
 </html>
