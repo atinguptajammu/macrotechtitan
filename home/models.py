@@ -15,6 +15,7 @@ class FormField(AbstractFormField):
 
 class PortfolioBlock(blocks.StructBlock):
     heading = blocks.CharBlock(classname="full title")
+    link =blocks.CharBlock(required=False)
     photo = ImageChooserBlock(required=True)
     intro = blocks.RichTextBlock()
 

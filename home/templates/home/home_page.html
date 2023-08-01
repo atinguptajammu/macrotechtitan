@@ -68,7 +68,8 @@ Delete the line below if you're just getting started and want to remove the welc
                     <div class="col-lg-3 col-md-6 mb-4">
                         <div class="port-inside"> 
                             <div class="img-h3">                   
-                            <a href="https://{{ block.value.heading }}">{% image block.value.photo original class="img-fluid" %}</a>
+                            {% comment %} <a href="https://{{ block.value.heading }}">{% image block.value.photo original class="img-fluid" %}</a> {% endcomment %}
+                            <a href="{{ block.value.link }}">{% image block.value.photo original class="img-fluid" %}</a>
                             <h3 class="mb-2" style="bottom:auto;">{{ block.value.heading }}</h3>
                             </div>
                             <div class="mb-2 mt-2">
